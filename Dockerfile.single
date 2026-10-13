@@ -1,0 +1,7 @@
+FROM maven:3.9-eclipse-temurin-17-alpine
+WORKDIR /app
+COPY . .
+RUN echo "Single stage build"
+ENV PORT=3000
+EXPOSE 3000
+CMD ["java", "-jar", "app.jar"]
